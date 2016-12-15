@@ -5,12 +5,16 @@ package com.neet.DiamondHunter.GameState;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
+import com.neet.DiamondHunter.Application.*;
 import com.neet.DiamondHunter.Manager.Content;
 import com.neet.DiamondHunter.Manager.GameStateManager;
 import com.neet.DiamondHunter.Manager.JukeBox;
 import com.neet.DiamondHunter.Manager.Keys;
 
-public class MenuState extends GameState {
+import javafx.stage.Stage;
+
+
+public class MenuState extends GameState{
 	
 	private BufferedImage bg;
 	private BufferedImage diamond;
@@ -72,6 +76,10 @@ public class MenuState extends GameState {
 		}
 		if(currentOption == 1){
 			//open map viewer
+			com.neet.DiamondHunter.Application.Main.main(null);
+			
+			/*Main test = new Main();
+			test.start(new Stage());*/
 		}
 		if(currentOption == 2) {
 			System.exit(0);

@@ -5,6 +5,7 @@ package com.neet.DiamondHunter.GameState;
 
 import java.awt.Graphics2D;
 
+import com.neet.DiamondHunter.Application.*;
 import com.neet.DiamondHunter.Manager.Content;
 import com.neet.DiamondHunter.Manager.GameStateManager;
 import com.neet.DiamondHunter.Manager.JukeBox;
@@ -55,6 +56,7 @@ public class PauseState extends GameState {
 			gsm.setPaused(false);
 			gsm.setState(GameStateManager.MENU);
 			//go to map viewer application
+			com.neet.DiamondHunter.Application.Main.main(null);
 
 		}
 	}
