@@ -1,4 +1,5 @@
 /com/
+<<<<<<< HEAD
 /HUD/
 /Logo/
 /Maps/
@@ -6,3 +7,5 @@
 /SFX/
 /Sprites/
 /Tilesets/
+=======
+>>>>>>> e84f90862bda24b55ae2eecaf37ceb44a2ad3ac7

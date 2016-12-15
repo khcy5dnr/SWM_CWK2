@@ -3,6 +3,7 @@ package com.neet.DiamondHunter.Application;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
@@ -15,7 +16,7 @@ public class Main extends Application {
 			Parent root = FXMLLoader.load(getClass().getResource("MapViewerWindow.fxml"));			
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setTitle(" Diamond Hunter Map Viewer ");
+			primaryStage.initStyle(StageStyle.UNDECORATED);
 			primaryStage.setScene(scene);
 			primaryStage.show();
 			
