@@ -7,13 +7,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 
-public class Main extends Application {
+public class LauncherMain extends Application {
 	public void start(Stage primaryStage) {
 		
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("MapViewerMenu.fxml"));			
+			Parent root = FXMLLoader.load(getClass().getResource("LauncherMenu.fxml"));
 			Scene scene = new Scene(root);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			scene.getStylesheets().add(getClass().getResource("LauncherMenu.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Diamond Hunter");
 			primaryStage.show();
