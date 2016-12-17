@@ -5,7 +5,6 @@ package com.neet.DiamondHunter.GameState;
 
 import java.awt.Graphics2D;
 
-import com.neet.DiamondHunter.Application.*;
 import com.neet.DiamondHunter.Manager.Content;
 import com.neet.DiamondHunter.Manager.GameStateManager;
 import com.neet.DiamondHunter.Manager.JukeBox;
@@ -27,10 +26,6 @@ public class PauseState extends GameState {
 		
 		Content.drawString(g, "paused", 40, 30);
 		
-		Content.drawString(g, "F10:", 28, 60);
-		Content.drawString(g, "Map", 68, 55);
-		Content.drawString(g, "Viewer", 68, 63);
-		
 		Content.drawString(g, "arrow", 12, 76);
 		Content.drawString(g, "keys", 16, 84);
 		Content.drawString(g, ": move", 52, 80);
@@ -51,13 +46,6 @@ public class PauseState extends GameState {
 		if(Keys.isPressed(Keys.F1)) {
 			gsm.setPaused(false);
 			gsm.setState(GameStateManager.MENU);
-		}
-		if(Keys.isPressed(Keys.F10)) {
-			gsm.setPaused(false);
-			gsm.setState(GameStateManager.MENU);
-			//go to map viewer application
-			com.neet.DiamondHunter.Application.Main.main(null);
-
 		}
 	}
 	
