@@ -2,38 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94c47242-e211-4050-b7b7-74d6db05e3de" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Diamond Hunter.iml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/.gitignore" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/Entity/Animation.class" afterPath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/Entity/Animation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/Entity/Diamond.class" afterPath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/Entity/Diamond.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/Entity/Entity.class" afterPath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/Entity/Entity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/Entity/Item.class" afterPath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/Entity/Item.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/Entity/Player.class" afterPath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/Entity/Player.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/Entity/Sparkle.class" afterPath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/Entity/Sparkle.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/GameState/GameOverState.class" afterPath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/GameState/GameOverState.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/GameState/GameState.class" afterPath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/GameState/GameState.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/GameState/IntroState.class" afterPath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/GameState/IntroState.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/GameState/MenuState.class" afterPath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/GameState/MenuState.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/GameState/PauseState.class" afterPath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/GameState/PauseState.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/GameState/PlayState.class" afterPath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/GameState/PlayState.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/HUD/Hud.class" afterPath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/HUD/Hud.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/Main/Game.class" afterPath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/Main/Game.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/Main/GamePanel.class" afterPath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/Main/GamePanel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/Manager/Content.class" afterPath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/Manager/Content.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/Manager/Data.class" afterPath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/Manager/Data.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/Manager/GameStateManager.class" afterPath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/Manager/GameStateManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/Manager/JukeBox.class" afterPath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/Manager/JukeBox.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/Manager/Keys.class" afterPath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/Manager/Keys.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/TileMap/Tile.class" afterPath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/TileMap/Tile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/TileMap/TileMap.class" afterPath="$PROJECT_DIR$/bin/com/neet/DiamondHunter/TileMap/TileMap.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/MapViewerController.java" afterPath="$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/MapViewerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/MapViewerWindow.fxml" afterPath="$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/MapViewerWindow.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/Main.java" afterPath="$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/LauncherMain.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/MapViewerMenu.fxml" afterPath="$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/LauncherMenu.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/application.css" afterPath="$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/LauncherMenu.css" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -88,7 +57,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="34">
               <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding />
             </state>
@@ -98,8 +67,8 @@
       <file leaf-file-name="MapViewerController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/MapViewerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+            <state relative-caret-position="136">
+              <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -621,22 +590,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/MapViewerWindow.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Diamond Hunter.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/LauncherMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -648,12 +601,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Diamond Hunter.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/MapViewerWindow.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/MapViewerWindow.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="34">
           <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding />
         </state>
@@ -661,8 +630,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/MapViewerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        <state relative-caret-position="136">
+          <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
