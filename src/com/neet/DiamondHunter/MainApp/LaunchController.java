@@ -38,6 +38,7 @@ public class LaunchController extends Application {
 		Parent root = FXMLLoader.load(getClass().getResource("MapViewerWindow.fxml"));
 		primaryStage.setTitle(" Diamond Hunter Map Viewer ");
 		Scene scene = new Scene(root);
+		scene.getStylesheets().add(getClass().getResource("MapViewerWindow.css").toExternalForm());
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
