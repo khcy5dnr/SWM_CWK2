@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="697.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <GridPane hgap="100.0" layoutX="85.0" layoutY="599.0" prefHeight="60.0" prefWidth="1111.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btnBack" mnemonicParsing="false" prefHeight="43.0" prefWidth="101.0" text="Back" />
+            <Button fx:id="btnAxe" layoutX="10.0" layoutY="19.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="101.0" text="Axe" GridPane.columnIndex="1" />
+            <Button fx:id="btnBoat" layoutX="212.0" layoutY="19.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="101.0" text="Boat" GridPane.columnIndex="2" />
+            <Button fx:id="btnUndo" layoutX="414.0" layoutY="19.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="101.0" text="Undo" GridPane.columnIndex="3" />
+            <Button fx:id="btnRedo" layoutX="616.0" layoutY="19.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="101.0" text="Redo" GridPane.columnIndex="4" />
+            <Button fx:id="btnSave" layoutX="818.0" layoutY="19.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="101.0" text="Save" GridPane.columnIndex="5" />
+         </children>
+      </GridPane>
+      <Canvas fx:id="mapCanvas" height="543.0" layoutX="13.0" layoutY="13.0" width="1255.0" />
+      <SplitPane layoutX="6.0" layoutY="7.0" prefHeight="556.0" prefWidth="6.0" />
+      <SplitPane layoutX="7.0" layoutY="557.0" orientation="VERTICAL" prefHeight="6.0" prefWidth="1264.0" />
+      <SplitPane layoutX="1267.0" layoutY="7.0" prefHeight="556.0" prefWidth="6.0" />
+      <SplitPane layoutX="6.0" layoutY="7.0" orientation="VERTICAL" prefHeight="6.0" prefWidth="1264.0" />
+   </children>
+</AnchorPane>

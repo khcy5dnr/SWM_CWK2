@@ -7,7 +7,7 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.neet.DiamondHunter.MainApp.LaunchController">
    <children>
       <Label fx:id="labelTitle" layoutX="148.0" layoutY="76.0" prefHeight="57.0" prefWidth="305.0" text="[Diamond Hunter]" />
-      <Button fx:id="btnMapViewer" layoutX="247.0" layoutY="277.0" mnemonicParsing="false" text="MAP VIEWER" />
+      <Button fx:id="btnMapViewer" layoutX="247.0" layoutY="277.0" mnemonicParsing="false" onAction="#mapViewerLaunch" text="MAP VIEWER" />
       <Button fx:id="btnPlay" layoutX="273.0" layoutY="200.0" mnemonicParsing="false" onAction="#gameDH" text="PLAY" />
    </children>
 </AnchorPane>
