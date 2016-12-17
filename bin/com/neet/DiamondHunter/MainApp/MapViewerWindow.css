@@ -1,0 +1,16 @@
+.root{
+	-fx-background-color: #101d49;
+}
+
+.split-pane{
+	-fx-background-color: #2bd3c6;
+}
+
+.button{
+	-fx-background-color: #2bd3c6;
+	-fx-border-style: solid;
+	-fx-border-color: #2bd3c6;
+	-fx-border-width: 3px;
+
+	-fx-font-size: 15px;
+}

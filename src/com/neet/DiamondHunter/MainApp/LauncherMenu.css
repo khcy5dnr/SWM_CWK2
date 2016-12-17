@@ -1,0 +1,21 @@
+.root{
+	-fx-background-color: #101d49;
+}
+
+.button{
+	-fx-background-color: #2bd3c6;
+	-fx-border-style: solid;
+	-fx-border-color: #2bd3c6;
+	-fx-border-width: 3px;
+
+	-fx-font-size: 15px;
+}
+
+.label{
+	-fx-background-color: #2bd3c6;
+	-fx-border-style: solid;
+	-fx-border-color: #2bd3c6;
+	-fx-border-width: 3px;
+
+	-fx-font-size: 15px;
+}
