@@ -16,8 +16,8 @@ private Button btnBack;
     @FXML
     public void exit()throws Exception{
         Scene scene = btnBack.getScene();
-        Stage test = (Stage)scene.getWindow();
-        test.hide();
+        Stage currentScene = (Stage)scene.getWindow();
+        currentScene.hide();
     }
 
 }
