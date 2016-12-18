@@ -4,7 +4,6 @@ import javax.swing.JFrame;
 
 import com.neet.DiamondHunter.Main.GamePanel;
 
-import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,7 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class LaunchController extends Application {
+public class LaunchController {
 	
 	Stage primaryStage = new Stage();
 	
@@ -43,9 +42,4 @@ public class LaunchController extends Application {
 		primaryStage.show();
 	}
 
-	@Override
-	public void start(Stage primaryStage) throws Exception {
-		// TODO Auto-generated method stub
-		
-	}
 }
