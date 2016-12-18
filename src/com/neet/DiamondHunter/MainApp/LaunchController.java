@@ -15,11 +15,13 @@ public class LaunchController {
 	
 	Stage primaryStage = new Stage();
 	
+	private static JFrame window;
+	
 	@FXML
 	private Button btnPlay;
 	
 	public void gameDH(){
-		JFrame window = new JFrame("Diamond Hunter");
+		window = new JFrame("Diamond Hunter");
 		
 		window.add(new GamePanel());
 		
@@ -30,6 +32,10 @@ public class LaunchController {
 		window.setVisible(true);
 		window.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		
+	}
+	
+	public static JFrame getWindow() {
+		return window;
 	}
 	
 	@FXML

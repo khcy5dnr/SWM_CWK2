@@ -5,10 +5,13 @@ package com.neet.DiamondHunter.GameState;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
+import javax.swing.JFrame;
+
 import com.neet.DiamondHunter.Manager.Content;
 import com.neet.DiamondHunter.Manager.GameStateManager;
 import com.neet.DiamondHunter.Manager.JukeBox;
 import com.neet.DiamondHunter.Manager.Keys;
+import com.neet.DiamondHunter.MainApp.LaunchController;
 
 public class MenuState extends GameState {
 	
@@ -20,6 +23,7 @@ public class MenuState extends GameState {
 		"START",
 		"QUIT"
 	};
+	
 	
 	public MenuState(GameStateManager gsm) {
 		super(gsm);
@@ -68,7 +72,9 @@ public class MenuState extends GameState {
 			gsm.setState(GameStateManager.PLAY);
 		}
 		if(currentOption == 1) {
-			System.exit(0);
+			//System.exit(0);
+			JFrame test = LaunchController.getWindow();
+			test.setVisible(false);
 		}
 	}
 	
