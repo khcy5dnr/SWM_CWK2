@@ -21,6 +21,9 @@ import com.neet.DiamondHunter.Manager.JukeBox;
 import com.neet.DiamondHunter.Manager.Keys;
 import com.neet.DiamondHunter.TileMap.TileMap;
 
+//SWM_CWK2
+import java.io.*;
+
 public class PlayState extends GameState {
 	
 	// player
@@ -54,6 +57,9 @@ public class PlayState extends GameState {
 	
 	// transition box
 	private ArrayList<Rectangle> boxes;
+
+	//SWM_CWK2
+	public int arr[] = new int[4];
 	
 	public PlayState(GameStateManager gsm) {
 		super(gsm);
@@ -171,17 +177,20 @@ public class PlayState extends GameState {
 	}
 	
 	private void populateItems() {
-		
+
+		//SWM_CWK2
+		readDB();
+
 		Item item;
 		
 		item = new Item(tileMap);
 		item.setType(Item.AXE);
-		item.setTilePosition(26, 37);
+		item.setTilePosition(arr[0], arr[1]);
 		items.add(item);
 		
 		item = new Item(tileMap);
 		item.setType(Item.BOAT);
-		item.setTilePosition(12, 4);
+		item.setTilePosition(arr[2],arr[3]);
 		items.add(item);
 		
 	}
@@ -382,5 +391,35 @@ public class PlayState extends GameState {
 			}
 		}
 	}
-	
+
+	//SWM_CWK2 ==========================================================
+	public void readDB() {
+		String line = null;
+
+		//creating file as obj to be read
+		File file = new File("Resources/Maps/itemDB.txt");
+
+		//check file existence
+		FileReader fr = null;
+		try {
+			fr = new FileReader(file);
+		} catch (FileNotFoundException e) {
+			System.out.println("File doesn't exists");
+			e.printStackTrace();
+		}
+
+		//new buffered reader; per lines
+		BufferedReader br = new BufferedReader(fr);
+		int i = 0;
+		try {
+			while ((line = br.readLine()) != null) {
+				arr[i] = Integer.parseInt(line);
+				i++;
+			}
+		}catch (IOException e){
+			e.printStackTrace();
+		}
+
+	}
+	//(End of) SWM_CWK2 =================================================
 }
