@@ -2,7 +2,7 @@ package com.neet.DiamondHunter.MainApp;
 
 
 import java.awt.image.BufferedImage;
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -31,6 +31,7 @@ public class MapViewerController implements Initializable{
 	
 	Stage primaryStage = new Stage();
 	private Boolean boat =false,axe=false;
+	private int arr[] = new int[4];
 	
 	@FXML
 	private Button btnBack;
@@ -94,21 +95,25 @@ public class MapViewerController implements Initializable{
 	public void mouseClicked(MouseEvent e)throws IOException {
 		int x=(int)e.getX() /16;
 		int y=(int)e.getY()/16;
-		System.out.println(x+","+y);//these co-ords are relative to the component
+		System.out.println(x+","+y);//console print //testing
 
-		//TileMap mm = new TileMap(16);
+		readDB(); //reading itemDB.txt, assuming no items chosen
+		          //hence the existing item won't return null pointer
 		GraphicsContext gc = mapCanvas.getGraphicsContext2D();
-		//draw boat
-		BufferedImage sprite;
 
+		BufferedImage sprite;
 		if (boat && !axe){
 			sprite = Content.ITEMS[1][0];
 			WritableImage boat = SwingFXUtils.toFXImage(sprite,null);
 			gc.drawImage(boat,16*x,16*y,16,16);
+			arr[3]=x;
+			arr[2]=y;
 		}else if (axe && !boat){
 			sprite = Content.ITEMS[1][1];
 			WritableImage axe = SwingFXUtils.toFXImage(sprite,null);
 			gc.drawImage(axe,16*x,16*y,16,16);
+			arr[1]=x;
+			arr[0]=y;
 		}
 
 	}
@@ -139,6 +144,35 @@ public class MapViewerController implements Initializable{
 			boat=false;
 			axe=false;
 		}
+	}
+
+	public void readDB() {
+		String line = null;
+
+		//creating file as obj to be read
+		File file = new File("Resources/Maps/itemDB.txt");
+
+		//check file existence
+		FileReader fr = null;
+		try {
+			fr = new FileReader(file);
+		} catch (FileNotFoundException e) {
+			System.out.println("File doesn't exists");
+			e.printStackTrace();
+		}
+
+		//new buffered reader; per lines
+		BufferedReader br = new BufferedReader(fr);
+		int i = 0;
+		try {
+			while ((line = br.readLine()) != null) {
+				arr[i] = Integer.parseInt(line);
+				i++;
+			}
+		}catch (IOException e){
+			e.printStackTrace();
+		}
+
 	}
 
 }

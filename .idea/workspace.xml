@@ -4,7 +4,6 @@
     <list default="true" id="aee5b911-b0c5-469a-b50f-028205cdfc44" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/MapViewerController.java" afterPath="$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/MapViewerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/MapViewerWindow.fxml" afterPath="$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/MapViewerWindow.fxml" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,54 +22,9 @@
       <file leaf-file-name="MapViewerController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/MapViewerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-907">
-              <caret line="32" column="42" lean-forward="false" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
-              <folding>
-                <element signature="e#2321#2462#0" expanded="true" />
-                <element signature="e#2461#2462#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MapViewerWindow.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/MapViewerWindow.fxml">
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="-1071">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1482183237746" expanded="true" signature="2780:3057" ph="..." />
-                <marker date="1482183237746" expanded="true" signature="2880:3033" ph="..." />
-                <marker date="1482183237746" expanded="true" signature="2903:3008" ph="..." />
-                <marker date="1482183237746" expanded="true" signature="3082:3156" ph="..." />
-                <marker date="1482183237746" expanded="true" signature="3347:3625" ph="..." />
-                <marker date="1482183237746" expanded="true" signature="3447:3601" ph="..." />
-                <marker date="1482183237746" expanded="true" signature="3470:3576" ph="..." />
-                <marker date="1482183237746" expanded="true" signature="3650:3725" ph="..." />
-                <marker date="1482183237746" expanded="true" signature="3860:4284" ph="..." />
-                <marker date="1482183237746" expanded="true" signature="3883:4161" ph="..." />
-                <marker date="1482183237746" expanded="true" signature="3983:4137" ph="..." />
-                <marker date="1482183237746" expanded="true" signature="4006:4112" ph="..." />
-                <marker date="1482183237746" expanded="true" signature="4186:4262" ph="..." />
-                <marker date="1482183237746" expanded="true" signature="4405:4822" ph="..." />
-                <marker date="1482183237746" expanded="true" signature="4429:4707" ph="..." />
-                <marker date="1482183237746" expanded="true" signature="4529:4683" ph="..." />
-                <marker date="1482183237746" expanded="true" signature="4552:4658" ph="..." />
-                <marker date="1482183237746" expanded="true" signature="4732:4800" ph="..." />
-                <marker date="1482183237746" expanded="true" signature="4943:5360" ph="..." />
-                <marker date="1482183237746" expanded="true" signature="4967:5245" ph="..." />
-                <marker date="1482183237746" expanded="true" signature="5067:5221" ph="..." />
-                <marker date="1482183237746" expanded="true" signature="5090:5196" ph="..." />
-                <marker date="1482183237746" expanded="true" signature="5270:5338" ph="..." />
-                <marker date="1482183237746" expanded="true" signature="5498:5915" ph="..." />
-                <marker date="1482183237746" expanded="true" signature="5522:5800" ph="..." />
-                <marker date="1482183237746" expanded="true" signature="5622:5776" ph="..." />
-                <marker date="1482183237746" expanded="true" signature="5645:5751" ph="..." />
-                <marker date="1482183237746" expanded="true" signature="5825:5893" ph="..." />
-              </folding>
+            <state relative-caret-position="-68">
+              <caret line="100" column="69" lean-forward="false" selection-start-line="100" selection-start-column="69" selection-end-line="100" selection-end-column="69" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -90,15 +44,16 @@
       <list>
         <option value="$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/TileMap.java" />
         <option value="$PROJECT_DIR$/Resources/Maps/itemDB.txt" />
-        <option value="$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/MapViewerController.java" />
         <option value="$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/MapViewerWindow.fxml" />
+        <option value="$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/MapViewerController.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="7" />
-    <option name="width" value="1378" />
-    <option name="height" value="780" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="784" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -117,7 +72,6 @@
     <panes>
       <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -180,6 +134,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DiamondHunter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GameState" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Diamond Hunter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gitts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -204,6 +180,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -498,6 +475,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="aee5b911-b0c5-469a-b50f-028205cdfc44" name="Default" comment="" />
@@ -509,7 +489,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="7" y="0" width="1378" height="780" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -520,12 +500,12 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32789317" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2503671" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25036603" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -548,6 +528,25 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/MapViewerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/MapViewerWindow.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/TileMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -560,7 +559,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -584,17 +582,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#2321#2462#0" expanded="true" />
-            <element signature="e#2461#2462#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/TileMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -603,7 +590,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -623,54 +609,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Diamond Hunter.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/MapViewerWindow.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="-1071">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1482183237746" expanded="true" signature="2780:3057" ph="..." />
-            <marker date="1482183237746" expanded="true" signature="2880:3033" ph="..." />
-            <marker date="1482183237746" expanded="true" signature="2903:3008" ph="..." />
-            <marker date="1482183237746" expanded="true" signature="3082:3156" ph="..." />
-            <marker date="1482183237746" expanded="true" signature="3347:3625" ph="..." />
-            <marker date="1482183237746" expanded="true" signature="3447:3601" ph="..." />
-            <marker date="1482183237746" expanded="true" signature="3470:3576" ph="..." />
-            <marker date="1482183237746" expanded="true" signature="3650:3725" ph="..." />
-            <marker date="1482183237746" expanded="true" signature="3860:4284" ph="..." />
-            <marker date="1482183237746" expanded="true" signature="3883:4161" ph="..." />
-            <marker date="1482183237746" expanded="true" signature="3983:4137" ph="..." />
-            <marker date="1482183237746" expanded="true" signature="4006:4112" ph="..." />
-            <marker date="1482183237746" expanded="true" signature="4186:4262" ph="..." />
-            <marker date="1482183237746" expanded="true" signature="4405:4822" ph="..." />
-            <marker date="1482183237746" expanded="true" signature="4429:4707" ph="..." />
-            <marker date="1482183237746" expanded="true" signature="4529:4683" ph="..." />
-            <marker date="1482183237746" expanded="true" signature="4552:4658" ph="..." />
-            <marker date="1482183237746" expanded="true" signature="4732:4800" ph="..." />
-            <marker date="1482183237746" expanded="true" signature="4943:5360" ph="..." />
-            <marker date="1482183237746" expanded="true" signature="4967:5245" ph="..." />
-            <marker date="1482183237746" expanded="true" signature="5067:5221" ph="..." />
-            <marker date="1482183237746" expanded="true" signature="5090:5196" ph="..." />
-            <marker date="1482183237746" expanded="true" signature="5270:5338" ph="..." />
-            <marker date="1482183237746" expanded="true" signature="5498:5915" ph="..." />
-            <marker date="1482183237746" expanded="true" signature="5522:5800" ph="..." />
-            <marker date="1482183237746" expanded="true" signature="5622:5776" ph="..." />
-            <marker date="1482183237746" expanded="true" signature="5645:5751" ph="..." />
-            <marker date="1482183237746" expanded="true" signature="5825:5893" ph="..." />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/neet/DiamondHunter/GameState/PlayState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2287">
+          <caret line="422" column="5" lean-forward="true" selection-start-line="395" selection-start-column="4" selection-end-line="422" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/TileMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1003">
+          <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/neet/DiamondHunter/MainApp/MapViewerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-907">
-          <caret line="32" column="42" lean-forward="false" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
-          <folding>
-            <element signature="e#2321#2462#0" expanded="true" />
-            <element signature="e#2461#2462#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-68">
+          <caret line="100" column="69" lean-forward="false" selection-start-line="100" selection-start-column="69" selection-end-line="100" selection-end-column="69" />
+          <folding />
         </state>
       </provider>
     </entry>
