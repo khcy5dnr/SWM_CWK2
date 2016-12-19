@@ -18,7 +18,7 @@ public class LaunchController {
 	private static JFrame window;
 	
 	@FXML
-	private Button btnPlay;
+	private Button btnPlay,btnExit;
 	
 	public void gameDH(){
 		window = new JFrame("Diamond Hunter");
@@ -46,6 +46,11 @@ public class LaunchController {
 		scene.getStylesheets().add(getClass().getResource("MapViewerWindow.css").toExternalForm());
 		primaryStage.setScene(scene);
 		primaryStage.show();
+	}
+
+	@FXML
+	public void exit(){
+		System.exit(0);
 	}
 
 }

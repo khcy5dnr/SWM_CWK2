@@ -5,7 +5,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.neet.DiamondHunter.MainApp.LaunchController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.neet.DiamondHunter.MainApp.LaunchController">
    <children>
       <Button fx:id="btnMapViewer" layoutX="175.0" layoutY="257.0" mnemonicParsing="false" onAction="#mapViewerLaunch" prefHeight="44.0" prefWidth="230.0">
       	<graphic>
@@ -30,7 +30,7 @@
 		      <Image url="@../../../../../Resources/CSSImages/labelTitle.png" />
 		   </image>
 	  </ImageView>
-      <Button fx:id="btnExit" layoutX="175.0" layoutY="328.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="252.0">
+      <Button fx:id="btnExit" layoutX="175.0" layoutY="328.0" mnemonicParsing="false" onAction="#exit" prefHeight="60.0" prefWidth="252.0">
          <graphic>
             <ImageView fitHeight="34.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true">
                <image>
