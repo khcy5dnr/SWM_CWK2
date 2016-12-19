@@ -1,11 +1,15 @@
 package com.neet.DiamondHunter.MainApp;
 
 
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import com.neet.DiamondHunter.Manager.Content;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -16,6 +20,8 @@ import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
+import javafx.scene.image.WritableImage;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
@@ -24,6 +30,7 @@ import javafx.util.Duration;
 public class MapViewerController implements Initializable{
 	
 	Stage primaryStage = new Stage();
+	private Boolean boat =false,axe=false;
 	
 	@FXML
 	private Button btnBack;
@@ -82,5 +89,56 @@ public class MapViewerController implements Initializable{
 		    }));
 		timeline.play();
     }
+
+	@FXML
+	public void mouseClicked(MouseEvent e)throws IOException {
+		int x=(int)e.getX() /16;
+		int y=(int)e.getY()/16;
+		System.out.println(x+","+y);//these co-ords are relative to the component
+
+		//TileMap mm = new TileMap(16);
+		GraphicsContext gc = mapCanvas.getGraphicsContext2D();
+		//draw boat
+		BufferedImage sprite;
+
+		if (boat && !axe){
+			sprite = Content.ITEMS[1][0];
+			WritableImage boat = SwingFXUtils.toFXImage(sprite,null);
+			gc.drawImage(boat,16*x,16*y,16,16);
+		}else if (axe && !boat){
+			sprite = Content.ITEMS[1][1];
+			WritableImage axe = SwingFXUtils.toFXImage(sprite,null);
+			gc.drawImage(axe,16*x,16*y,16,16);
+		}
+
+	}
+
+	@FXML
+	public void setItemBoat(){
+		if (!boat && !axe){
+			boat=true;
+			axe=false;
+		}else if (!boat && axe){
+			boat=true;
+			axe=false;
+		}else if (boat && axe){
+			boat=false;
+			axe=false;
+		}
+	}
+
+	@FXML
+	public void setItemAxe(){
+		if (!boat && !axe){
+			axe=true;
+			boat=false;
+		}else if (boat && !axe){
+			boat=false;
+			axe=true;
+		}else if (boat && axe){
+			boat=false;
+			axe=false;
+		}
+	}
 
 }
