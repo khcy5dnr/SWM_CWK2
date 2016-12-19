@@ -40,7 +40,7 @@ public class MapViewerController implements Initializable{
         TileMap test = new TileMap(16);
         test.loadMap("/Maps/testmap.map");
         test.draw_Image(gc);
-		
+		test.draw_Item(gc);
 	}
 	
     private void drawShapes(GraphicsContext gc) {
@@ -61,7 +61,7 @@ public class MapViewerController implements Initializable{
 
 	@FXML
 	public void save() throws Exception{    
-    	Stage stage = new Stage();
+    	final Stage stage = new Stage();
     	Parent root = FXMLLoader.load(getClass().getResource("SavedNotification.fxml"));
     	stage.initStyle(StageStyle.UNDECORATED);
     	stage.setTitle(" Save Complete ");

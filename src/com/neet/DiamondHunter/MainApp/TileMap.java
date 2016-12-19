@@ -1,14 +1,18 @@
 package com.neet.DiamondHunter.MainApp;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.awt.image.BufferedImage;
+import java.io.*;
 
+import com.neet.DiamondHunter.Manager.Content;
+import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
+import javafx.scene.image.WritableImage;
 
 public class TileMap {
-	
+
+	private int arr[] = new int[4];
+	private BufferedImage sprite;
 	
 	private int[][] map;
 	private int tileSize;
@@ -58,6 +62,52 @@ public class TileMap {
 				gc.drawImage(tile, originalPoint*tileSize, yOSH*tileSize, tileSize, tileSize, col*tileSize, row*tileSize, tileSize, tileSize);
 			}
 		}
+	}
+
+	public void draw_Item(GraphicsContext gc){
+		int w = 16, h = 16;
+		readDB();
+		int xB = arr[1], yB = arr[0];
+		int xA = arr[3], yA = arr[2];
+
+		//draw boat
+		sprite = Content.ITEMS[1][1];
+		WritableImage boat = SwingFXUtils.toFXImage(sprite,null);
+		gc.drawImage(boat,xB*w,yB*h,w,h);
+
+		//draw axe
+		sprite = Content.ITEMS[1][0];
+		WritableImage axe = SwingFXUtils.toFXImage(sprite,null);
+		gc.drawImage(axe,xA*w,yA*h,w,h);
+	}
+
+	public void readDB() {
+		String line = null;
+
+		//creating file as obj to be read
+		File file = new File("Resources/Maps/itemDB.txt");
+
+		//check file existence
+		FileReader fr = null;
+		try {
+			fr = new FileReader(file);
+		} catch (FileNotFoundException e) {
+			System.out.println("File doesn't exists");
+			e.printStackTrace();
+		}
+
+		//new buffered reader; per lines
+		BufferedReader br = new BufferedReader(fr);
+		int i = 0;
+		try {
+			while ((line = br.readLine()) != null) {
+				arr[i] = Integer.parseInt(line);
+				i++;
+			}
+		}catch (IOException e){
+			e.printStackTrace();
+		}
+
 	}
 
 }
