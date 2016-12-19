@@ -4,6 +4,10 @@ package com.neet.DiamondHunter.MainApp;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -13,6 +17,8 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+import javafx.util.Duration;
 
 
 public class MapViewerController implements Initializable{
@@ -57,12 +63,24 @@ public class MapViewerController implements Initializable{
 	public void save() throws Exception{    
     	Stage stage = new Stage();
     	Parent root = FXMLLoader.load(getClass().getResource("SavedNotification.fxml"));
-    	//stage.initStyle(StageStyle.UNDECORATED);
+    	stage.initStyle(StageStyle.UNDECORATED);
     	stage.setTitle(" Save Complete ");
 		Scene scene = new Scene(root);
 		scene.getStylesheets().add(getClass().getResource("SavedNotification.css").toExternalForm());
 		stage.setScene(scene);
 		stage.show();
+		
+		// saved notification disappears after 2 seconds
+		Timeline timeline = new Timeline();
+		timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(2),
+		    new EventHandler<ActionEvent>() {
+
+			@Override
+		    public void handle(ActionEvent event) {
+		            stage.hide();
+		        }
+		    }));
+		timeline.play();
     }
 
 }

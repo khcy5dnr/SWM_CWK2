@@ -25,7 +25,7 @@
                   <Image url="@../../../../../Resources/CSSImages/iconSaved.png" />
                </image>
             </ImageView>
-            <Label prefHeight="78.0" prefWidth="264.0" text="Changes is saved" textFill="WHITE" GridPane.columnIndex="1">
+            <Label prefHeight="78.0" prefWidth="281.0" text="Changes are saved" textFill="WHITE" GridPane.columnIndex="1">
                <font>
                   <Font name="Agency FB" size="46.0" />
                </font>
