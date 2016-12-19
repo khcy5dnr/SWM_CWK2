@@ -86,7 +86,7 @@
                   <Tooltip text="Redo" />
                </tooltip>
             </Button>
-            <Button fx:id="btnSave" layoutX="818.0" layoutY="19.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="93.0" GridPane.columnIndex="5">
+            <Button fx:id="btnSave" layoutX="818.0" layoutY="19.0" mnemonicParsing="false" onAction="#save" prefHeight="88.0" prefWidth="93.0" GridPane.columnIndex="5">
             	 <graphic>
             		<ImageView fitHeight="57.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
                <image>
