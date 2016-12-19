@@ -31,7 +31,9 @@ public class MapViewerController implements Initializable{
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		GraphicsContext gc = mapCanvas.getGraphicsContext2D();
-        drawShapes(gc);
+        TileMap test = new TileMap(16);
+        test.loadMap("/Maps/testmap.map");
+        test.draw_Image(gc);
 		
 	}
 	
