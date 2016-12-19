@@ -11,10 +11,16 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="697.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.neet.DiamondHunter.MainApp.MapViewerController">
+<AnchorPane prefHeight="811.0" prefWidth="955.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.neet.DiamondHunter.MainApp.MapViewerController">
    <children>
-      <GridPane hgap="50.0" layoutX="146.0" layoutY="585.0" prefHeight="73.0" prefWidth="989.0">
+      <Canvas fx:id="mapCanvas" height="645.0" layoutX="159.0" layoutY="26.0" width="641.0" />
+      <SplitPane layoutX="152.0" layoutY="20.0" prefHeight="652.0" prefWidth="6.0" />
+      <SplitPane layoutX="152.0" layoutY="668.0" orientation="VERTICAL" prefHeight="6.0" prefWidth="654.0" />
+      <SplitPane layoutX="800.0" layoutY="20.0" prefHeight="652.0" prefWidth="6.0" />
+      <SplitPane layoutX="154.0" layoutY="20.0" orientation="VERTICAL" prefHeight="6.0" prefWidth="652.0" />
+      <GridPane layoutX="92.0" layoutY="696.0" prefHeight="102.0" prefWidth="802.0">
         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -26,21 +32,21 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="btnBack" mnemonicParsing="false" onAction="#exit" prefHeight="88.0" prefWidth="93.0">
-            	<graphic>
-            		<ImageView fitHeight="61.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+            <Button fx:id="btnInfo" mnemonicParsing="false" prefHeight="85.0" prefWidth="85.0" GridPane.columnIndex="1">
+            	 <graphic>
+            		<ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Resources/CSSImages/btnBack.png" />
+                  <Image url="@../../../../../Resources/CSSImages/btnInfo.png" />
                </image>
             </ImageView>
-            	</graphic>
+            	</graphic> 
                <tooltip>
-                  <Tooltip text="Back To Menu" />
+                  <Tooltip text="Instruction" />
                </tooltip>
             </Button>
-            <Button fx:id="btnAxe" layoutX="10.0" layoutY="19.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="93.0" GridPane.columnIndex="1">
+            <Button fx:id="btnAxe" mnemonicParsing="false" prefHeight="85.0" prefWidth="85.0" GridPane.columnIndex="2">
             <graphic>
-            		<ImageView fitHeight="68.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+            		<ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../Resources/CSSImages/btnAxe.png" />
                </image>
@@ -50,9 +56,9 @@
                   <Tooltip text="Choose Axe" />
                </tooltip>
             </Button>
-            <Button fx:id="btnBoat" layoutX="212.0" layoutY="19.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="93.0" GridPane.columnIndex="2">
+            <Button fx:id="btnBoat" mnemonicParsing="false" prefHeight="85.0" prefWidth="85.0" GridPane.columnIndex="3">
            		 <graphic>
-            		<ImageView fitHeight="61.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+            		<ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../Resources/CSSImages/btnBoat.png" />
                </image>
@@ -62,9 +68,21 @@
                   <Tooltip text="Choose Boat" />
                </tooltip>
             </Button>
-            <Button fx:id="btnUndo" layoutX="414.0" layoutY="19.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="93.0" GridPane.columnIndex="3">
+            <Button fx:id="btnBack" mnemonicParsing="false" onAction="#exit" prefHeight="85.0" prefWidth="85.0">
+            	<graphic>
+            		<ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Resources/CSSImages/btnBack.png" />
+               </image>
+            </ImageView>
+            	</graphic>
+               <tooltip>
+                  <Tooltip text="Back To Menu" />
+               </tooltip>
+            </Button>
+            <Button fx:id="btnUndo" mnemonicParsing="false" prefHeight="85.0" prefWidth="85.0" GridPane.columnIndex="4">
             	 <graphic>
-            		<ImageView fitHeight="62.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+            		<ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../Resources/CSSImages/btnUndo.png" />
                </image>
@@ -74,9 +92,9 @@
                   <Tooltip text="Undo" />
                </tooltip>
             </Button>
-            <Button fx:id="btnRedo" layoutX="616.0" layoutY="19.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="93.0" GridPane.columnIndex="4">
+            <Button fx:id="btnRedo" mnemonicParsing="false" prefHeight="85.0" prefWidth="85.0" GridPane.columnIndex="5">
             	 <graphic>
-            		<ImageView fitHeight="62.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+            		<ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../Resources/CSSImages/btnRedo.png" />
                </image>
@@ -86,9 +104,9 @@
                   <Tooltip text="Redo" />
                </tooltip>
             </Button>
-            <Button fx:id="btnSave" layoutX="818.0" layoutY="19.0" mnemonicParsing="false" onAction="#save" prefHeight="88.0" prefWidth="93.0" GridPane.columnIndex="5">
+            <Button fx:id="btnSave" mnemonicParsing="false" onAction="#save" prefHeight="85.0" prefWidth="85.0" GridPane.columnIndex="6">
             	 <graphic>
-            		<ImageView fitHeight="57.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+            		<ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../Resources/CSSImages/btnSave.png" />
                </image>
@@ -100,10 +118,5 @@
             </Button>
          </children>
       </GridPane>
-      <Canvas fx:id="mapCanvas" height="543.0" layoutX="13.0" layoutY="13.0" width="1255.0" />
-      <SplitPane layoutX="6.0" layoutY="7.0" prefHeight="556.0" prefWidth="6.0" />
-      <SplitPane layoutX="7.0" layoutY="557.0" orientation="VERTICAL" prefHeight="6.0" prefWidth="1264.0" />
-      <SplitPane layoutX="1267.0" layoutY="7.0" prefHeight="556.0" prefWidth="6.0" />
-      <SplitPane layoutX="6.0" layoutY="7.0" orientation="VERTICAL" prefHeight="6.0" prefWidth="1264.0" />
    </children>
 </AnchorPane>
