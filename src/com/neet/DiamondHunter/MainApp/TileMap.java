@@ -22,6 +22,7 @@ public class TileMap {
 	
 	public TileMap(int size){
 		this.tileSize = size;
+		readDB();
 	}
 	
 	public void loadMap(String path){
@@ -66,6 +67,7 @@ public class TileMap {
 
 	public void draw_Item(GraphicsContext gc, String itemName){
 		int width = 16, height = 16;
+
 		readDB();
 		int xB = arr[3], yB = arr[2];
 		int xA = arr[1], yA = arr[0];
@@ -81,6 +83,22 @@ public class TileMap {
 			sprite = Content.ITEMS[1][1];
 			WritableImage axe = SwingFXUtils.toFXImage(sprite,null);
 			gc.drawImage(axe,xA*width,yA*height,width,height);
+		}
+	}
+
+	public void draw_Item(GraphicsContext gc, String itemName,int y, int x){
+		int width = 16, height = 16;
+		//draw boat
+		if(itemName == "boat"){
+			sprite = Content.ITEMS[1][0];
+			WritableImage boat = SwingFXUtils.toFXImage(sprite,null);
+			gc.drawImage(boat,x*width,y*height,width,height);
+		}
+		//draw axe
+		else if(itemName == "axe"){
+			sprite = Content.ITEMS[1][1];
+			WritableImage axe = SwingFXUtils.toFXImage(sprite,null);
+			gc.drawImage(axe,x*width,y*height,width,height);
 		}
 	}
 
@@ -107,6 +125,7 @@ public class TileMap {
 				arr[i] = Integer.parseInt(line);
 				i++;
 			}
+			br.close();
 		}catch (IOException e){
 			e.printStackTrace();
 		}
