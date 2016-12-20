@@ -67,8 +67,8 @@ public class TileMap {
 	public void draw_Item(GraphicsContext gc, String itemName){
 		int width = 16, height = 16;
 		readDB();
-		int xB = arr[1], yB = arr[0];
-		int xA = arr[3], yA = arr[2];
+		int xB = arr[3], yB = arr[2];
+		int xA = arr[1], yA = arr[0];
 
 		//draw boat
 		if(itemName == "boat"){

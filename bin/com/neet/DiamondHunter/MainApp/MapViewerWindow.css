@@ -1,5 +1,7 @@
 .root{
 	-fx-background-color: #5cada7;
+	-fx-max-width: 70%;
+	-fx-max-height: 70%;
 }
 
 .split-pane{
