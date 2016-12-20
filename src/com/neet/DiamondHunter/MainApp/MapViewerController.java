@@ -89,6 +89,23 @@ public class MapViewerController implements Initializable{
 		        }
 		    }));
 		timeline.play();
+		
+		//save coordinates of boat and axe position
+		String filename = "Resources/Maps/itemDB.txt";
+		BufferedWriter bw = null;
+		
+		try{
+			bw = new BufferedWriter(new FileWriter(filename));
+			for(int i=0; i < 4; i++){
+				bw.write(Integer.toString(arr[i]));
+				bw.newLine();	
+			}
+			bw.flush();
+			bw.close();
+		}
+		catch(IOException e){
+			e.printStackTrace();
+		}
     }
 
 	@FXML
@@ -190,5 +207,7 @@ public class MapViewerController implements Initializable{
 		}
 
 	}
+	
+	
 
 }
