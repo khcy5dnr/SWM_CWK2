@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -22,9 +23,18 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="btnSaveAlert" mnemonicParsing="false" prefHeight="50.0" prefWidth="133.0" text="SAVE" textFill="WHITE" />
-            <Button fx:id="btnDontSaveAlert" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="135.0" text="DON'T SAVE" textFill="WHITE" GridPane.columnIndex="1" />
-            <Button fx:id="btnCancelAlert" layoutX="110.0" layoutY="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="135.0" text="CANCEL" textFill="WHITE" GridPane.columnIndex="2" />
+            <Button fx:id="btnSaveAlert" mnemonicParsing="false" prefHeight="50.0" prefWidth="133.0" text="SAVE" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="btnDontSaveAlert" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="135.0" text="DON'T SAVE" textFill="WHITE" GridPane.columnIndex="1">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="btnCancelAlert" layoutX="110.0" layoutY="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="135.0" text="CANCEL" textFill="WHITE" GridPane.columnIndex="2">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
          </children>
       </GridPane>
       <Label layoutX="188.0" layoutY="52.0" prefHeight="24.0" prefWidth="337.0" text="You haven't saved your changes." textFill="WHITE">
