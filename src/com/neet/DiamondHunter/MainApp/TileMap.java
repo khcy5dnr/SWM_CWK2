@@ -58,27 +58,30 @@ public class TileMap {
 					yOSH++;
 					originalPoint = (int) (originalPoint - tile.getWidth()/tileSize);
 				}
-
+			
 				gc.drawImage(tile, originalPoint*tileSize, yOSH*tileSize, tileSize, tileSize, col*tileSize, row*tileSize, tileSize, tileSize);
 			}
 		}
 	}
 
-	public void draw_Item(GraphicsContext gc){
-		int w = 16, h = 16;
+	public void draw_Item(GraphicsContext gc, String itemName){
+		int width = 16, height = 16;
 		readDB();
 		int xB = arr[1], yB = arr[0];
 		int xA = arr[3], yA = arr[2];
 
 		//draw boat
-		sprite = Content.ITEMS[1][1];
-		WritableImage boat = SwingFXUtils.toFXImage(sprite,null);
-		gc.drawImage(boat,xB*w,yB*h,w,h);
-
+		if(itemName == "boat"){
+			sprite = Content.ITEMS[1][0];
+			WritableImage boat = SwingFXUtils.toFXImage(sprite,null);
+			gc.drawImage(boat,xB*width,yB*height,width,height);
+		}
 		//draw axe
-		sprite = Content.ITEMS[1][0];
-		WritableImage axe = SwingFXUtils.toFXImage(sprite,null);
-		gc.drawImage(axe,xA*w,yA*h,w,h);
+		else if(itemName == "axe"){
+			sprite = Content.ITEMS[1][1];
+			WritableImage axe = SwingFXUtils.toFXImage(sprite,null);
+			gc.drawImage(axe,xA*width,yA*height,width,height);
+		}
 	}
 
 	public void readDB() {

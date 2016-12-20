@@ -41,25 +41,22 @@ public class MapViewerController implements Initializable{
 	
 	@FXML
 	private Canvas mapCanvas;
+	
+	public TileMap test = new TileMap(16);
+	
+	private boolean flagAxe = true;
+	private boolean flagBoat = true;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		GraphicsContext gc = mapCanvas.getGraphicsContext2D();
-        TileMap test = new TileMap(16);
+        
         test.loadMap("/Maps/testmap.map");
         test.draw_Image(gc);
-		test.draw_Item(gc);
+		test.draw_Item(gc, "boat");
+		test.draw_Item(gc, "axe");
 	}
 	
-    private void drawShapes(GraphicsContext gc) {
-    	gc.beginPath();
-        gc.moveTo(30.5, 30.5);
-        gc.lineTo(150.5, 30.5);
-        gc.lineTo(150.5, 150.5);
-        gc.lineTo(30.5, 30.5);
-        gc.stroke();
-	}
-
 	@FXML
     public void exit()throws Exception{
         Scene scene = btnBack.getScene();
@@ -94,7 +91,7 @@ public class MapViewerController implements Initializable{
 	@FXML
 	public void mouseClicked(MouseEvent e)throws IOException {
 		int x=(int)e.getX() /16;
-		int y=(int)e.getY()/16;
+		int y=(int)e.getY()/16;		
 		System.out.println(x+","+y);//console print //testing
 
 		readDB(); //reading itemDB.txt, assuming no items chosen
@@ -105,16 +102,28 @@ public class MapViewerController implements Initializable{
 		if (boat && !axe){
 			sprite = Content.ITEMS[1][0];
 			WritableImage boat = SwingFXUtils.toFXImage(sprite,null);
+			test.draw_Image(gc);
 			gc.drawImage(boat,16*x,16*y,16,16);
+			flagBoat = false;
+			if(flagAxe){
+				test.draw_Item(gc, "axe");
+			}
 			arr[3]=x;
 			arr[2]=y;
-		}else if (axe && !boat){
+		}
+		else if (axe && !boat){
 			sprite = Content.ITEMS[1][1];
 			WritableImage axe = SwingFXUtils.toFXImage(sprite,null);
+			test.draw_Image(gc);
 			gc.drawImage(axe,16*x,16*y,16,16);
+			flagAxe = false;
+			if(flagBoat){
+				test.draw_Item(gc, "boat");
+			}
 			arr[1]=x;
-			arr[0]=y;
+			arr[0]=y;			
 		}
+        
 
 	}
 
@@ -156,7 +165,8 @@ public class MapViewerController implements Initializable{
 		FileReader fr = null;
 		try {
 			fr = new FileReader(file);
-		} catch (FileNotFoundException e) {
+		} 
+		catch (FileNotFoundException e) {
 			System.out.println("File doesn't exists");
 			e.printStackTrace();
 		}
