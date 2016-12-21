@@ -85,7 +85,8 @@ public class TileMap {
 			gc.drawImage(axe,xA*width,yA*height,width,height);
 		}
 	}
-
+	
+	//overload method
 	public void draw_Item(GraphicsContext gc, String itemName,int y, int x){
 		int width = 16, height = 16;
 		//draw boat
