@@ -20,8 +20,10 @@ import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.WritableImage;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
@@ -43,6 +45,11 @@ public class MapViewerController implements Initializable{
 	@FXML
 	private Canvas mapCanvas;
 	
+	@FXML
+    Label currentPos = new Label();
+    @FXML
+    Label currentStatus = new Label();
+	
 	public TileMap tm = new TileMap(16);
 	
 	@Override
@@ -54,6 +61,21 @@ public class MapViewerController implements Initializable{
         tm.draw_Image(gc);
 		tm.draw_Item(gc, "boat");
 		tm.draw_Item(gc, "axe");
+	}
+	
+	@FXML
+	public void validation(){
+		mapCanvas.setOnMouseMoved(event -> {
+            String msg = String.valueOf((int)event.getX()/16 + " , " + (int)event.getY()/16);
+            currentPos.setText(msg);
+            if(!tm.getStatus((int)event.getX()/16,(int)event.getY()/16)){
+                currentStatus.setTextFill(Color.web("#FF0000"));
+                currentStatus.setText("Blocked");
+            }else{
+                currentStatus.setTextFill(Color.web("#008000"));
+                currentStatus.setText("Can place");
+            }
+        });
 	}
 	
 	@FXML
