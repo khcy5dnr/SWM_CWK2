@@ -146,10 +146,12 @@ public class MapViewerController implements Initializable{
 		if (!boat && !axe){
 			boat=true;
 			axe=false;
-		}else if (!boat && axe){
+		}
+		else if (!boat && axe){
 			boat=true;
 			axe=false;
-		}else if (boat && axe){
+		}
+		else if (boat && axe){
 			boat=false;
 			axe=false;
 		}
