@@ -32,6 +32,7 @@ public class MapViewerController implements Initializable{
 	Stage primaryStage = new Stage();
 	private Boolean boat =false,axe=false;
 	public int arr[] = new int[4];
+	private Boolean isSaved=true;
 
 	@FXML
 	private Button btnBack;
@@ -53,14 +54,30 @@ public class MapViewerController implements Initializable{
         tm.draw_Image(gc);
 		tm.draw_Item(gc, "boat");
 		tm.draw_Item(gc, "axe");
-
 	}
 	
 	@FXML
     public void exit()throws Exception{
-        Scene scene = btnBack.getScene();
-        Stage currentScene = (Stage)scene.getWindow();
-        currentScene.hide();
+		if (!isSaved){
+			final Stage stage = new Stage();
+			Parent root = FXMLLoader.load(getClass().getResource("UnsavedChangesAlertBox.fxml"));
+			stage.initStyle(StageStyle.UNDECORATED);
+			stage.setTitle(" Save Complete ");
+			Scene scene = new Scene(root);
+			scene.getStylesheets().add(getClass().getResource("UnsavedChangesAlertBox.css").toExternalForm());
+			stage.setScene(scene);
+			stage.show();
+		}else if (isSaved){
+			System.out.println("backed");
+			Scene currWindow = btnBack.getScene();
+			Stage currentScene = (Stage)currWindow.getWindow();
+			currentScene.hide();
+		}
+
+
+        //Scene scene = btnBack.getScene();
+        //Stage currentScene = (Stage)scene.getWindow();
+        //currentScene.hide();
     }
 
 	@FXML
@@ -102,10 +119,12 @@ public class MapViewerController implements Initializable{
 		catch(IOException e){
 			e.printStackTrace();
 		}
+		isSaved=true;
     }
 
 	@FXML
 	public void mouseClicked(MouseEvent e)throws IOException {
+		isSaved=false;
 		int x=(int)e.getX() / 16;
 		int y=(int)e.getY() / 16;
 
