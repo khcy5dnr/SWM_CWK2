@@ -32,7 +32,6 @@ public class MapViewerController implements Initializable{
 	Stage primaryStage = new Stage();
 	private Boolean boat =false,axe=false;
 	public int arr[] = new int[4];
-	//private int tempArr[] = new int[4];
 
 	@FXML
 	private Button btnBack;
@@ -124,13 +123,11 @@ public class MapViewerController implements Initializable{
 			WritableImage boat = SwingFXUtils.toFXImage(sprite,null);
 
 			gc.drawImage(boat,16*x,16*y,16,16);
-			//if (arr[3]!=x && arr[2]!=y){
+
 			test.draw_Item(gc, "axe",arr[0],arr[1]);
 			arr[3]=x;
 			arr[2]=y;
 			System.out.println(arr[0]+" "+arr[1]+" "+arr[2]+" "+arr[3]);
-
-			//}
 		}
 		//case axe chosen
 		else if (axe && !boat){
@@ -139,13 +136,10 @@ public class MapViewerController implements Initializable{
 			WritableImage axe = SwingFXUtils.toFXImage(sprite,null);
 
 			gc.drawImage(axe,16*x,16*y,16,16);
-			//if (arr[1]!=x && arr[0]!=y){
 			test.draw_Item(gc, "boat",arr[2],arr[3]);
 			arr[1]=x;
 			arr[0]=y;
 			System.out.println(arr[0]+" "+arr[1]+" "+arr[2]+" "+arr[3]);
-
-			//}
 		}
 	}
 
