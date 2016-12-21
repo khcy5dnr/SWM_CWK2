@@ -19,6 +19,7 @@ public class LauncherMain extends Application {
 			scene.getStylesheets().add(getClass().getResource("LauncherMenu.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Diamond Hunter");
+			primaryStage.setResizable(false);
 			primaryStage.show();
 			primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
 	            public void handle(WindowEvent t) {

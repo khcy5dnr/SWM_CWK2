@@ -32,7 +32,6 @@ public class MapViewerController implements Initializable{
 	Stage primaryStage = new Stage();
 	private Boolean boat =false,axe=false;
 	public int arr[] = new int[4];
-	//private int tempArr[] = new int[4];
 
 	@FXML
 	private Button btnBack;
@@ -120,6 +119,7 @@ public class MapViewerController implements Initializable{
 			WritableImage boat = SwingFXUtils.toFXImage(sprite,null);
 
 			gc.drawImage(boat,16*x,16*y,16,16);
+
 
 			tm.draw_Item(gc, "axe",arr[0],arr[1]);
 			arr[3]=x;
