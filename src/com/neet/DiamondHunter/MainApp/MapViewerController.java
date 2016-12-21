@@ -32,7 +32,6 @@ public class MapViewerController implements Initializable{
 	Stage primaryStage = new Stage();
 	private Boolean boat =false,axe=false;
 	public int arr[] = new int[4];
-	//private int tempArr[] = new int[4];
 
 	@FXML
 	private Button btnBack;
@@ -43,20 +42,17 @@ public class MapViewerController implements Initializable{
 	@FXML
 	private Canvas mapCanvas;
 	
-	public TileMap test = new TileMap(16);
+	public TileMap tm = new TileMap(16);
 	
-	private boolean flagAxe = true;
-	private boolean flagBoat = true;
-
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		GraphicsContext gc = mapCanvas.getGraphicsContext2D();
 		readDB();
-		test.readDB();
-        test.loadMap("/Maps/testmap.map");
-        test.draw_Image(gc);
-		test.draw_Item(gc, "boat");
-		test.draw_Item(gc, "axe");
+		tm.readDB();
+        tm.loadMap("/Maps/testmap.map");
+        tm.draw_Image(gc);
+		tm.draw_Item(gc, "boat");
+		tm.draw_Item(gc, "axe");
 
 	}
 	
@@ -112,40 +108,36 @@ public class MapViewerController implements Initializable{
 	public void mouseClicked(MouseEvent e)throws IOException {
 		int x=(int)e.getX() / 16;
 		int y=(int)e.getY() / 16;
-		System.out.println(x+","+y);//console print //testing
 
 		GraphicsContext gc = mapCanvas.getGraphicsContext2D();
 
 		BufferedImage sprite;
 		//case boat chosen
 		if (boat && !axe){
-			test.draw_Image(gc);
+			tm.draw_Image(gc);
 			sprite = Content.ITEMS[1][0];
 			WritableImage boat = SwingFXUtils.toFXImage(sprite,null);
 
 			gc.drawImage(boat,16*x,16*y,16,16);
-			//if (arr[3]!=x && arr[2]!=y){
-			test.draw_Item(gc, "axe",arr[0],arr[1]);
+
+
+			tm.draw_Item(gc, "axe",arr[0],arr[1]);
 			arr[3]=x;
 			arr[2]=y;
 			System.out.println(arr[0]+" "+arr[1]+" "+arr[2]+" "+arr[3]);
-
-			//}
+			
 		}
 		//case axe chosen
 		else if (axe && !boat){
-			test.draw_Image(gc);
+			tm.draw_Image(gc);
 			sprite = Content.ITEMS[1][1];
 			WritableImage axe = SwingFXUtils.toFXImage(sprite,null);
 
 			gc.drawImage(axe,16*x,16*y,16,16);
-			//if (arr[1]!=x && arr[0]!=y){
-			test.draw_Item(gc, "boat",arr[2],arr[3]);
+			
+			tm.draw_Item(gc, "boat",arr[2],arr[3]);
 			arr[1]=x;
 			arr[0]=y;
-			System.out.println(arr[0]+" "+arr[1]+" "+arr[2]+" "+arr[3]);
-
-			//}
 		}
 	}
 
