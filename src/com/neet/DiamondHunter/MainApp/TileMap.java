@@ -52,15 +52,15 @@ public class TileMap {
 		tile = new Image("/Tilesets/testtileset.gif");
 		for (int row = 0; row < map.length; row++) {
 			for (int col = 0; col < map[row].length; col++) {
-				int originalPoint = map[row][col];
-				int yOSH = 0;
+				int sx = map[row][col];
+				int sy = 0;
 				
-				if(originalPoint >= (tile.getWidth()/tileSize)){
-					yOSH++;
-					originalPoint = (int) (originalPoint - tile.getWidth()/tileSize);
+				if(sx >= (tile.getWidth()/tileSize)){
+					sy++;
+					sx = (int) (sx - tile.getWidth()/tileSize);
 				}
 			
-				gc.drawImage(tile, originalPoint*tileSize, yOSH*tileSize, tileSize, tileSize, col*tileSize, row*tileSize, tileSize, tileSize);
+				gc.drawImage(tile, sx*tileSize, sy*tileSize, tileSize, tileSize, col*tileSize, row*tileSize, tileSize, tileSize);
 			}
 		}
 	}
