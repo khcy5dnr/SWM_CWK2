@@ -35,7 +35,7 @@ public class MapViewerController implements Initializable{
 	Stage primaryStage = new Stage();
 	private Boolean boat =false,axe=false;
 	public int arr[] = new int[4];
-	private Boolean isSaved=true;
+	private Boolean isSaved=true,isValid;
 
 	@FXML
 	private Button btnBack;
@@ -67,8 +67,10 @@ public class MapViewerController implements Initializable{
             // Show tooltip on canvas
             if(!tm.getStatus((int)event.getX()/16,(int)event.getY()/16)){
             	Tooltip.install(mapCanvas, new Tooltip(msg + ": Blocked"));
+            	isValid=false;
             }else{
             	Tooltip.install(mapCanvas, new Tooltip(msg + ": Can place"));
+            	isValid=true;
             }
         });
 	}
@@ -142,49 +144,52 @@ public class MapViewerController implements Initializable{
 	@FXML
 	public void mouseClicked(MouseEvent e)throws IOException {
 		isSaved=false;
-		int x=(int)e.getX() / 16;
-		int y=(int)e.getY() / 16;
+		//check validation before drawing
+		if (isValid){
+			int x=(int)e.getX() / 16;
+			int y=(int)e.getY() / 16;
 
-		GraphicsContext gc = mapCanvas.getGraphicsContext2D();
+			GraphicsContext gc = mapCanvas.getGraphicsContext2D();
 
-		BufferedImage sprite;
-		//case boat chosen
-		if (boat && !axe){
-			tm.draw_Image(gc);
-			sprite = Content.ITEMS[1][0];
-			WritableImage boat = SwingFXUtils.toFXImage(sprite,null);
+			BufferedImage sprite;
+			//case boat chosen
+			if (boat && !axe){
+				tm.draw_Image(gc);
+				sprite = Content.ITEMS[1][0];
+				WritableImage boat = SwingFXUtils.toFXImage(sprite,null);
 
-			gc.drawImage(boat,16*x,16*y,16,16);
+				gc.drawImage(boat,16*x,16*y,16,16);
 
 
-			tm.draw_Item(gc, "axe",arr[0],arr[1]);
-			arr[3]=x;
-			arr[2]=y;
-			System.out.println(arr[0]+" "+arr[1]+" "+arr[2]+" "+arr[3]);
-			
-		}
-		//case axe chosen
-		else if (axe && !boat){
-			tm.draw_Image(gc);
-			sprite = Content.ITEMS[1][1];
-			WritableImage axe = SwingFXUtils.toFXImage(sprite,null);
+				tm.draw_Item(gc, "axe",arr[0],arr[1]);
+				arr[3]=x;
+				arr[2]=y;
+				System.out.println(arr[0]+" "+arr[1]+" "+arr[2]+" "+arr[3]);
 
-			gc.drawImage(axe,16*x,16*y,16,16);
-			
-			tm.draw_Item(gc, "boat",arr[2],arr[3]);
-			arr[1]=x;
-			arr[0]=y;
-		}
-		
-		// show alert box if user placed the item on invalid location
-		if(!tm.getStatus((int)e.getX()/16,(int)e.getY()/16)){
+			}
+			//case axe chosen
+			else if (axe && !boat){
+				tm.draw_Image(gc);
+				sprite = Content.ITEMS[1][1];
+				WritableImage axe = SwingFXUtils.toFXImage(sprite,null);
+
+				gc.drawImage(axe,16*x,16*y,16,16);
+
+				tm.draw_Item(gc, "boat",arr[2],arr[3]);
+				arr[1]=x;
+				arr[0]=y;
+			}
+
+		}else{
+			//if invalid, do nothing (dont draw)
+
+			// show alert box if user placed the item on invalid location
 			Alert alert = new Alert(AlertType.INFORMATION);
 			alert.setTitle("Warning");
 			alert.setHeaderText(null);
 			alert.setContentText("The item cannot be placed. Please change the location.");
-
 			alert.showAndWait();
-        }
+		}
 	}
 
 	@FXML
