@@ -22,7 +22,7 @@
          <children>
             <ImageView fitHeight="104.0" fitWidth="106.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Resources/CSSImages/iconSaved.png" />
+                  <Image url="@../../../../../Resources/CSSImages/iconSaved.gif" />
                </image>
             </ImageView>
             <Label prefHeight="78.0" prefWidth="281.0" text="Changes are saved" textFill="WHITE" GridPane.columnIndex="1">

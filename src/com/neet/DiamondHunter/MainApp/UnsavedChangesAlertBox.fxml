@@ -44,7 +44,7 @@
       </Label>
       <ImageView fitHeight="69.0" fitWidth="80.0" layoutX="86.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../Resources/CSSImages/iconUnsavedAlert.png" />
+            <Image url="@../../../../../Resources/CSSImages/iconUnsavedAlert.gif" />
          </image>
       </ImageView>
    </children>

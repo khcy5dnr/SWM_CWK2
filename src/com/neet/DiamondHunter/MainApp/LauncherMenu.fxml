@@ -12,7 +12,7 @@
       	<graphic>
         	<ImageView fitHeight="44.0" fitWidth="266.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Resources/CSSImages/btnMapViewer.png" />
+                  <Image url="@../../../../../Resources/CSSImages/btnMapViewer.gif" />
                </image>
             </ImageView>
         </graphic>
@@ -24,7 +24,7 @@
       	<graphic>
         	<ImageView fitHeight="44.0" fitWidth="266.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Resources/CSSImages/btnPlay.png" />
+                  <Image url="@../../../../../Resources/CSSImages/btnPlay.gif" />
                </image>
             </ImageView>
         </graphic>
@@ -34,14 +34,14 @@
       </Button>
 	  <ImageView fitHeight="132.0" fitWidth="339.0" layoutX="142.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
 		   <image>
-		      <Image url="@../../../../../Resources/CSSImages/labelTitle.png" />
+		      <Image url="@../../../../../Resources/CSSImages/labelTitle.gif" />
 		   </image>
 	  </ImageView>
       <Button fx:id="btnExit" layoutX="175.0" layoutY="328.0" mnemonicParsing="false" onAction="#exit" prefHeight="60.0" prefWidth="252.0">
          <graphic>
             <ImageView fitHeight="34.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Resources/CSSImages/btnExit.png" />
+                  <Image url="@../../../../../Resources/CSSImages/btnExit.gif" />
                </image>
             </ImageView>
          </graphic>
