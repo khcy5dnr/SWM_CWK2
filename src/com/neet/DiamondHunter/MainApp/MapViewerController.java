@@ -185,6 +185,7 @@ public class MapViewerController implements Initializable{
 		tutor.showAndWait();
 	}
 
+	//sets the flag to true if boat button is selected
 	@FXML
 	public void setItemBoat(){
 		if (!boat && !axe){

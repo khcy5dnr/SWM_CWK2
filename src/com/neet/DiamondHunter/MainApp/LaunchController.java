@@ -9,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class LaunchController {
@@ -51,6 +52,8 @@ public class LaunchController {
 		scene.getStylesheets().add(getClass().getResource("MapViewerWindow.css").toExternalForm());
 		primaryStage.setScene(scene);
 		primaryStage.setResizable(false);
+		Image icon = new Image(getClass().getResourceAsStream("iconDiamond.png"));
+		primaryStage.getIcons().add(icon);
 		primaryStage.show();
 	}
 
