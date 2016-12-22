@@ -38,7 +38,7 @@
             	 <graphic>
             		<ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Resources/CSSImages/btnInfo.gif" />
+                  <Image url="/CSSImages/btnInfo.gif" />
                </image>
             </ImageView>
             	</graphic> 
@@ -53,7 +53,7 @@
             <graphic>
             		<ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Resources/CSSImages/btnAxe.gif" />
+                  <Image url="/CSSImages/btnAxe.gif" />
                </image>
             </ImageView>
             	</graphic>
@@ -68,7 +68,7 @@
            		 <graphic>
             		<ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Resources/CSSImages/btnBoat.gif" />
+                  <Image url="/CSSImages/btnBoat.gif" />
                </image>
             </ImageView>
             	</graphic>
@@ -83,7 +83,7 @@
             	<graphic>
             		<ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Resources/CSSImages/btnBack.gif" />
+                  <Image url="/CSSImages/btnBack.gif" />
                </image>
             </ImageView>
             	</graphic>
@@ -98,7 +98,7 @@
             	 <graphic>
             		<ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Resources/CSSImages/btnUndo.gif" />
+                  <Image url="/CSSImages/btnUndo.gif" />
                </image>
             </ImageView>
             	</graphic>
@@ -113,7 +113,7 @@
             	 <graphic>
             		<ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Resources/CSSImages/btnRedo.gif" />
+                  <Image url="/CSSImages/btnRedo.gif" />
                </image>
             </ImageView>
             	</graphic>
@@ -128,7 +128,7 @@
             	 <graphic>
             		<ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Resources/CSSImages/btnSave.gif" />
+                  <Image url="/CSSImages/btnSave.gif" />
                </image>
             </ImageView>
             	</graphic>

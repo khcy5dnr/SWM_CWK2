@@ -20,6 +20,9 @@ public class LaunchController {
 	@FXML
 	private Button btnPlay,btnExit;
 	
+	@FXML
+	private Button btnMapViewer = new Button();
+	
 	public void gameDH(){
 		window = new JFrame("Diamond Hunter");
 		
