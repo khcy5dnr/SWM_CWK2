@@ -25,6 +25,7 @@ public class TileMap {
 		readDB();
 	}
 	
+	//load the map from resources
 	public void loadMap(String path){
 		try {			
 			InputStream in = getClass().getResourceAsStream(path);
@@ -48,6 +49,7 @@ public class TileMap {
 		}
 	}
 	
+	//draws the map on canvas
 	public void draw_Image(GraphicsContext gc){
 		tile = new Image("/Tilesets/testtileset.gif");
 		for (int row = 0; row < map.length; row++) {
@@ -64,7 +66,8 @@ public class TileMap {
 			}
 		}
 	}
-
+	
+	//draw axe or boat on the map.
 	public void draw_Item(GraphicsContext gc, String itemName){
 		int width = 16, height = 16;
 
@@ -102,7 +105,8 @@ public class TileMap {
 			gc.drawImage(axe,x*width,y*height,width,height);
 		}
 	}
-
+	
+	//read the coordinates of the axe and boat from itemDB.txt
 	public void readDB() {
 		String line = null;
 
@@ -133,6 +137,7 @@ public class TileMap {
 
 	}
 	
+	//get the value of the item on the map and return boolean value whether can draw or not
 	public boolean getStatus(int x, int y){
         boolean isWalkable = true;
         try{

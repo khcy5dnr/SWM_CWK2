@@ -12,7 +12,7 @@ import javafx.scene.Scene;
 
 public class LauncherMain extends Application {
 	public void start(Stage primaryStage) {
-		
+		//launch the main launcher for the game and map viewer
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("LauncherMenu.fxml"));
 			Scene scene = new Scene(root);

@@ -32,11 +32,13 @@ import javafx.util.Duration;
 
 public class MapViewerController implements Initializable{
 	
-	Stage primaryStage = new Stage();
+	
 	private Boolean boat =false,axe=false;
-	public int arr[] = new int[4];
 	private Boolean isSaved=true;
-
+	
+	//for readBD
+	public int arr[] = new int[4];
+	
 	@FXML
 	private Button btnBack;
 	
@@ -73,6 +75,7 @@ public class MapViewerController implements Initializable{
         });
 	}
 	
+	//used for back button on map viewer 
 	@FXML
     public void exit()throws Exception{
 		if (!isSaved){
@@ -90,13 +93,8 @@ public class MapViewerController implements Initializable{
 			Stage currentScene = (Stage)currWindow.getWindow();
 			currentScene.hide();
 		}
-
-
-        //Scene scene = btnBack.getScene();
-        //Stage currentScene = (Stage)scene.getWindow();
-        //currentScene.hide();
     }
-
+	
 	@FXML
 	public void save() throws Exception{    
     	final Stage stage = new Stage();
@@ -138,7 +136,8 @@ public class MapViewerController implements Initializable{
 		}
 		isSaved=true;
     }
-
+	
+	//used for validation
 	@FXML
 	public void mouseClicked(MouseEvent e)throws IOException {
 		isSaved=false;
@@ -186,7 +185,8 @@ public class MapViewerController implements Initializable{
 			alert.showAndWait();
         }
 	}
-
+	
+	//sets the flag to true if boat button is selected
 	@FXML
 	public void setItemBoat(){
 		if (!boat && !axe){
@@ -202,7 +202,8 @@ public class MapViewerController implements Initializable{
 			axe=false;
 		}
 	}
-
+	
+	//sets the flag to true if axe button is selected
 	@FXML
 	public void setItemAxe(){
 		if (!boat && !axe){

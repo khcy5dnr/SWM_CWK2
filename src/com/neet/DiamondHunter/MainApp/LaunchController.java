@@ -23,6 +23,7 @@ public class LaunchController {
 	@FXML
 	private Button btnMapViewer = new Button();
 	
+	//launch the Diamond Hunter game
 	public void gameDH(){
 		window = new JFrame("Diamond Hunter");
 		
@@ -41,6 +42,7 @@ public class LaunchController {
 		return window;
 	}
 	
+	//launch the Map Viewer for Diamond Hunter game
 	@FXML
 	public void mapViewerLaunch() throws Exception{
 		Parent root = FXMLLoader.load(getClass().getResource("MapViewerWindow.fxml"));
