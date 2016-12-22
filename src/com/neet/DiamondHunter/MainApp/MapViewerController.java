@@ -7,15 +7,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import com.neet.DiamondHunter.Manager.Content;
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
 import javafx.embed.swing.SwingFXUtils;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -26,9 +20,6 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.WritableImage;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
-import javafx.util.Duration;
-
 
 public class MapViewerController implements Initializable{
 	
@@ -78,49 +69,31 @@ public class MapViewerController implements Initializable{
 	@FXML
     public void exit()throws Exception{
 		if (!isSaved){
-			final Stage stage = new Stage();
-			Parent root = FXMLLoader.load(getClass().getResource("UnsavedChangesAlertBox.fxml"));
-			stage.initStyle(StageStyle.UNDECORATED);
-			stage.setTitle(" Save Complete ");
-			Scene scene = new Scene(root);
-			scene.getStylesheets().add(getClass().getResource("UnsavedChangesAlertBox.css").toExternalForm());
-			stage.setScene(scene);
-			stage.show();
+			
+			// show unsaved changes warning
+			Alert saved = new Alert(AlertType.WARNING);
+			saved.setTitle("Changes Detected!");
+			saved.setHeaderText(null);
+			saved.setContentText("Please save your changes.");
+			saved.showAndWait();
+			
 		}else if (isSaved){
 			System.out.println("backed");
 			Scene currWindow = btnBack.getScene();
 			Stage currentScene = (Stage)currWindow.getWindow();
 			currentScene.hide();
 		}
-
-
-        //Scene scene = btnBack.getScene();
-        //Stage currentScene = (Stage)scene.getWindow();
-        //currentScene.hide();
     }
 
 	@FXML
 	public void save() throws Exception{    
-    	final Stage stage = new Stage();
-    	Parent root = FXMLLoader.load(getClass().getResource("SavedNotification.fxml"));
-    	stage.initStyle(StageStyle.UNDECORATED);
-    	stage.setTitle(" Save Complete ");
-		Scene scene = new Scene(root);
-		scene.getStylesheets().add(getClass().getResource("SavedNotification.css").toExternalForm());
-		stage.setScene(scene);
-		stage.show();
 		
-		// saved notification disappears after 2 seconds
-		Timeline timeline = new Timeline();
-		timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(2),
-		    new EventHandler<ActionEvent>() {
-
-			@Override
-		    public void handle(ActionEvent event) {
-		            stage.hide();
-		        }
-		    }));
-		timeline.play();
+		// show save complete alert box once save button is clicked
+		Alert saved = new Alert(AlertType.INFORMATION);
+		saved.setTitle("Save Complete");
+		saved.setHeaderText(null);
+		saved.setContentText("Changes are saved.");
+		saved.showAndWait();
 		
 		//save coordinates of boat and axe position
 		String filename = "Resources/Maps/itemDB.txt";
@@ -144,6 +117,7 @@ public class MapViewerController implements Initializable{
 	@FXML
 	public void mouseClicked(MouseEvent e)throws IOException {
 		isSaved=false;
+		
 		//check validation before drawing
 		if (isValid){
 			int x=(int)e.getX() / 16;
@@ -181,7 +155,7 @@ public class MapViewerController implements Initializable{
 			}
 
 		}else{
-			//if invalid, do nothing (dont draw)
+			//if invalid, do nothing (don't draw)
 
 			// show alert box if user placed the item on invalid location
 			Alert alert = new Alert(AlertType.INFORMATION);
@@ -190,6 +164,22 @@ public class MapViewerController implements Initializable{
 			alert.setContentText("The item cannot be placed. Please change the location.");
 			alert.showAndWait();
 		}
+	}
+	
+	// Show the instruction to use the map viewer.
+	@FXML
+	public void information() {
+		
+		String tutorial = "1. Choose Axe (or Boat) button to change the \n    axe (or boat) location."
+				+ "\n2. Click empty grass tile to set new location. "
+				+ "\n3. Click Save button to save the new changes."
+				+ "\n4. Click Back button to return to the menu.";
+		
+		Alert tutor = new Alert(AlertType.INFORMATION);
+		tutor.setTitle("Instruction");
+		tutor.setHeaderText(null);
+		tutor.setContentText(tutorial);
+		tutor.showAndWait();
 	}
 
 	@FXML
