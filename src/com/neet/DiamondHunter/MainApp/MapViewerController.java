@@ -19,11 +19,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.Tooltip;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.WritableImage;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
@@ -45,11 +46,6 @@ public class MapViewerController implements Initializable{
 	@FXML
 	private Canvas mapCanvas;
 	
-	@FXML
-    Label currentPos = new Label();
-    @FXML
-    Label currentStatus = new Label();
-	
 	public TileMap tm = new TileMap(16);
 	
 	@Override
@@ -67,13 +63,12 @@ public class MapViewerController implements Initializable{
 	public void validation(){
 		mapCanvas.setOnMouseMoved(event -> {
             String msg = String.valueOf((int)event.getX()/16 + " , " + (int)event.getY()/16);
-            currentPos.setText(msg);
+            
+            // Show tooltip on canvas
             if(!tm.getStatus((int)event.getX()/16,(int)event.getY()/16)){
-                currentStatus.setTextFill(Color.web("#FF0000"));
-                currentStatus.setText("Blocked");
+            	Tooltip.install(mapCanvas, new Tooltip(msg + ": Blocked"));
             }else{
-                currentStatus.setTextFill(Color.web("#008000"));
-                currentStatus.setText("Can place");
+            	Tooltip.install(mapCanvas, new Tooltip(msg + ": Can place"));
             }
         });
 	}
@@ -180,6 +175,16 @@ public class MapViewerController implements Initializable{
 			arr[1]=x;
 			arr[0]=y;
 		}
+		
+		// show alert box if user placed the item on invalid location
+		if(!tm.getStatus((int)e.getX()/16,(int)e.getY()/16)){
+			Alert alert = new Alert(AlertType.INFORMATION);
+			alert.setTitle("Warning");
+			alert.setHeaderText(null);
+			alert.setContentText("The item cannot be placed. Please change the location.");
+
+			alert.showAndWait();
+        }
 	}
 
 	@FXML
