@@ -136,8 +136,7 @@ public class TileMap {
 	public boolean getStatus(int x, int y){
         boolean isWalkable = true;
         try{
-            if(map[x][y] >= 20){
-            	System.out.println("Map number: " + map[x][y]);
+            if(map[y][x] >= 20){
             	isWalkable = false;
             }
         }catch(Exception e){
