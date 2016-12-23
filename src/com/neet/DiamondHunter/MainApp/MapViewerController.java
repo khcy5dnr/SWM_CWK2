@@ -80,10 +80,9 @@ public class MapViewerController implements Initializable{
 			saved.showAndWait();
 			
 		}else if (isSaved){
-			System.out.println("backed");
 			Scene currWindow = btnBack.getScene();
 			Stage currentScene = (Stage)currWindow.getWindow();
-			currentScene.hide();
+			currentScene.close();
 		}
     }
 	

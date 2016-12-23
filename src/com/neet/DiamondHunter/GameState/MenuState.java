@@ -73,8 +73,8 @@ public class MenuState extends GameState {
 		}
 		if(currentOption == 1) {
 			//System.exit(0);
-			JFrame test = LaunchController.getWindow();
-			test.setVisible(false);
+			JFrame currentFrame = LaunchController.getWindow();
+			currentFrame.setVisible(false);
 		}
 	}
 	

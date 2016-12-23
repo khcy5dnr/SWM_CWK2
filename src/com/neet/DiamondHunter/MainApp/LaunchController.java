@@ -31,6 +31,7 @@ public class LaunchController {
 		window.add(new GamePanel());
 		
 		window.setResizable(false);
+		window.setUndecorated(true);
 		window.pack();
 		
 		window.setLocationRelativeTo(null);
