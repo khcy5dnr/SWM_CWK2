@@ -18,6 +18,7 @@ Group members:
 	3.1. Click Play Game to open the Diamond Hunter game.
 
 	3.2. Click the Map Viewer to open the map viewer.
+
 		3.2.1. Click the instruction button on the map viewer to read the intructions.
 
 	3.3. Click Exit to close the application.
