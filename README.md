@@ -13,7 +13,7 @@ Group members:
 
 1. Download/clone the whole project
 2. Run the "Diamond Hunter.jar" to run the launcher of the game.
-3. There are three options for user once the game is launched:
+3. There are three options for user to choose once the game is launched:
 
 	3.1. Click Play Game to open the Diamond Hunter game.
 
